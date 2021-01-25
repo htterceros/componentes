@@ -1,0 +1,33 @@
+<ion-header>
+  <ion-toolbar>
+    <ion-buttons slot="start">
+      <ion-button (click)="onClick()">
+        <ion-icon slot="start" name="add"></ion-icon>
+        Click me
+      </ion-button>
+    </ion-buttons>
+    <ion-title>avatar</ion-title>
+    <ion-avatar slot="end">
+      <img src="assets/Imagenes/pocoyo4.jpg">
+    </ion-avatar>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content>
+  <ion-chip color="primary" mode="ios" outline="true">
+    <ion-avatar>
+      <img src="assets/Imagenes/pocoyo2.jpg">
+    </ion-avatar>
+    <ion-label>Poco-Family</ion-label>
+  </ion-chip>
+
+  <ion-list *ngFor="let item of avatar">
+    <ion-item>
+      <ion-avatar slot="end">
+        <img [src]="item.icono" />
+      </ion-avatar>
+      <ion-label>{{item.nombre}}</ion-label>
+    </ion-item>
+  </ion-list>
+
+</ion-content>
